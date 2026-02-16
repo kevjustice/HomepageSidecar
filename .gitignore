@@ -1,0 +1,28 @@
+# Node
+node_modules/
+dist/
+build/
+.npm/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config (Local specific)
+config/
+
+# IDE
+.vscode/
+.idea/
+.gemini/
+.agent/
+brain/

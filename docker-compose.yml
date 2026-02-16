@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - 3000:3000
+    volumes:
+      - ./config:/app/config
+    restart: unless-stopped
+
+  homepage-helper:
+    build: .
+    container_name: homepage-helper
+    ports:
+      - 8080:8080
+    volumes:
+      - ./config:/config
+      - helper-data:/data
+    environment:
+      - BASIC_AUTH_USER=admin
+      - BASIC_AUTH_PASS=password # User should change this
+    depends_on:
+      - homepage
+    restart: unless-stopped
+
+volumes:
+  helper-data:
