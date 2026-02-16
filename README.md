@@ -10,7 +10,6 @@ Homepage Helper acts as a "Sidecar" to your Homepage instance, allowing you to m
 - **Tree Editor**: Manage nested groups and hierarchy with ease.
 - **Widget Catalog**: Discover and configure information widgets with direct template support.
 - **Expert Mode**: Direct YAML access for power users with real-time preview.
-- 
 - **Custom Branding**: Fully dark-mode themed with a premium UI.
 
 ## 🚀 Getting Started
@@ -22,7 +21,13 @@ Homepage Helper acts as a "Sidecar" to your Homepage instance, allowing you to m
 
 ### Installation
 
-3. Update your `docker-compose.yml` to include the helper service.
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/kevjustice/HomepageSidecar.git
+   cd HomepageSidecar
+   ```
+
+2. Update your `docker-compose.yml` to include the helper service.
 
 ```yaml
 services:
@@ -39,8 +44,8 @@ services:
     restart: unless-stopped
 ```
 
-4. Run `docker compose up -d --build`.
-5. Visit `http://localhost:8080`.
+3. Run `docker compose up -d --build`.
+4. Visit `http://localhost:8080`.
 
 ## 🛠 Tech Stack
 
