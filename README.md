@@ -10,7 +10,7 @@ Homepage Helper acts as a "Sidecar" to your Homepage instance, allowing you to m
 - **Tree Editor**: Manage nested groups and hierarchy with ease.
 - **Widget Catalog**: Discover and configure information widgets with direct template support.
 - **Expert Mode**: Direct YAML access for power users with real-time preview.
-- **Docker/K8s/Proxmox**: First-class support for infrastructure-specific configurations.
+- 
 - **Custom Branding**: Fully dark-mode themed with a premium UI.
 
 ## 🚀 Getting Started
@@ -22,29 +22,35 @@ Homepage Helper acts as a "Sidecar" to your Homepage instance, allowing you to m
 
 ### Installation
 
-1. Clone this repository and update the `docker-compose.yml`.
-2. Update your `docker-compose.yml` to mount your Homepage config directory.
+3. Update your `docker-compose.yml` to include the helper service.
 
 ```yaml
 services:
   homepage-helper:
-    image: kevjustice/homepage-helper:latest
+    build: .
     container_name: homepage-helper
     ports:
       - "8080:8080"
     volumes:
-      - /path/to/your/homepage/config:/app/config
+      - /path/to/your/homepage/config:/config
+    environment:
+      - BASIC_AUTH_USER=admin
+      - BASIC_AUTH_PASS=password
     restart: unless-stopped
 ```
 
-3. Run `docker compose up -d`.
-4. Visit `http://localhost:8080`.
+4. Run `docker compose up -d --build`.
+5. Visit `http://localhost:8080`.
 
 ## 🛠 Tech Stack
 
 - **Frontend**: React, TypeScript, TailwindCSS, Vite, Lucide, Dnd-kit.
 - **Backend**: Fastify, Node.js, TypeScript, Zod.
 - **Branding**: Custom Minimalist UX.
+
+## :warning: WARNING :warning:
+
+This application was built 100% using [Google Antigravity](https://antigravity.google/)  I was able to craft it by developing a 15 page prompt (assisted by ChatGPT), and then fed this to Antigravity.  This gave me the first working version and then I began tweaks and edits until I got to the current version.  I am a developer, but I did not develop this app.  I have not done a line-by-line review of the code.  For the purpose of it editing just the files for the Homepage App, this app should be fine and not cause any security concerns.  However I would NOT expose it to the public web or give it any additional rights into Docker or anything else.
 
 ## 📜 License
 
@@ -55,4 +61,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
+
 Created with ❤️ by [Kevin Justice](https://github.com/kevjustice)
