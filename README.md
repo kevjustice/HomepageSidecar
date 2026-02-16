@@ -50,7 +50,7 @@ services:
 
 ## :warning: WARNING :warning:
 
-This application was built 100% using [Google Antigravity](https://antigravity.google/)  I was able to craft it by developing a 15 page prompt (assisted by ChatGPT), and then fed this to Antigravity.  This gave me the first working version and then I began tweaks and edits until I got to the current version.  I am a developer, but I did not develop this app.  I have not done a line-by-line review of the code.  For the purpose of it editing just the files for the Homepage App, this app should be fine and not cause any security concerns.  However I would NOT expose it to the public web or give it any additional rights into Docker or anything else.
+This application was built 100% using [Google Antigravity](https://antigravity.google/)  I was able to craft it by developing a 15 page prompt (assisted by ChatGPT), and then fed this to Antigravity.  That gave me the first working version and then I began tweaks and edits (by telling Antigravity what I wanted fixed) until I got to the current version.  I am a developer, but I did not develop this app.  I have not done a line-by-line review of the code.  For the purpose of it editing just the config files for the Homepage App, this app should be fine and not cause any security concerns.  However I would NOT expose it to the public web or give it any additional rights into Docker or anything else.
 
 ## 📜 License
 
